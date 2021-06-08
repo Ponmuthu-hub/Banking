@@ -19,7 +19,6 @@ nodes:any;
   ngOnInit(): void {
     this.initSvg();
     this.drawChart();
-    console.log(this.chartData)
   }
   initSvg(){
     this.height = 500;

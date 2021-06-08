@@ -34,7 +34,6 @@ export class BarChartComponent implements OnInit {
     this.initAxis();
     this.drawAxis();
     this.drawBars();
-    console.log(this.chartData)
   }
   initSvg() {
     this.svg = d3.select('#barChart')
