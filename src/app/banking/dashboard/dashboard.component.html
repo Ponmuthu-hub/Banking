@@ -1,0 +1,29 @@
+<ul>
+    <li><a href="">Home</a></li>
+    <li style="float:right"><a class="active" href="">Login</a></li>
+  </ul>
+  <div style="text-align: center;"><h4>Bank Dashboard</h4></div>
+<div class="chartContainer">
+    <div class="row col-md-12">
+        <div class="col-md-6">
+            <figure style="margin-left: 20px;"><app-bar-chart [chartData]="barChartDatas"></app-bar-chart></figure>
+           
+        </div>
+        <div class="col-md-6">
+             <figure><app-pie-chart [chartData]="pieChartDatas"></app-pie-chart></figure>
+        </div>      
+    </div>
+    <div class="row col-md-12">
+        <div class="col-md-6">
+            <figure><app-bubble-chart [chartData]="bubbleChartDatas"></app-bubble-chart></figure>
+            
+        </div>
+        <div class="col-md-6">
+            <figure><app-scatter-plots-chart [chartData]="scatterChartDatas"></app-scatter-plots-chart></figure>
+        </div>      
+    </div>
+</div>
+
+
+
+
