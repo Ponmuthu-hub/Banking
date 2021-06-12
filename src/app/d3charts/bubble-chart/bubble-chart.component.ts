@@ -10,12 +10,13 @@ import { DashboardService } from 'src/app/banking/dashboard.service';
 export class BubbleChartComponent implements OnInit {
 @Input() chartData:any
   constructor(public dashboardService:DashboardService) { }
-  title:string='Working Employees'
+title:string='Loan with Consumers'
 height:any;
 width:any;
 bubble:any;
 svg:any;
 nodes:any;
+tooltip:any;
   ngOnInit(): void {
     this.initSvg();
     this.drawChart();
@@ -63,6 +64,11 @@ nodes:any;
       }).style("fill", function (d: any, i: any) {
         return color(i);
       });
+      this.tooltip = d3.select("body").append('div')
+      .attr('class', 'tooltip')
+      .style('opacity', 0)
+      .style("color", "#00008B")
+      .style('text-align', 'center');
 
     node.append("title")
       .text(function (d: any) {
@@ -102,6 +108,21 @@ nodes:any;
         return d.r / 5;
       })
       .attr("fill", "white");
+      node.on('mouseover', (d: any, i: any) => {   
+        this.tooltip.transition()
+          .duration(200)
+          .style('opacity', .9);
+        this.tooltip.html('<br/>' + i.data.Name + ' Loan <br/>' + i.data.Count+' Consumers')
+          .style('left', 70 + 'px')
+          .style('top', 700 + 'px')
+          .style('font-weight','bold');
+      })
+      node.on('mouseout', (d: any) => {
+        this.tooltip.transition()
+          .duration(500)
+          .style('opacity', 0)
+          ;
+      });
 
 
   }

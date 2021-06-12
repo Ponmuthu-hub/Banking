@@ -1,4 +1,3 @@
-import { analyzeAndValidateNgModules } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { DashboardService } from '../dashboard.service';
 
@@ -13,6 +12,8 @@ export class DashboardComponent implements OnInit {
 scatterChartDatas:any[]=[];
 bubbleChartDatas:any;
 children:any[]=[];
+gaugeChartData:any;
+densityChartData:any;
 
   constructor(public dashboardService:DashboardService) { }
 
@@ -21,11 +22,13 @@ children:any[]=[];
     this.refreshBarChartData();
     this.refreshScatterChartData();
     this.refreshBubbleChartData();
+    this.refreshGaugeChartData();
+    this.refreshDensityChartData();
   }
 refreshPieChartData(){
 for(let i=0;i<this.dashboardService.StatsPieChart.length;i++){
-this.pieChartDatas[i]={name:this.dashboardService.StatsPieChart[i].name,
-  value:this.dashboardService.StatsPieChart[i].value}
+this.pieChartDatas[i]={name:this.dashboardService.StatsPieChart[i].branch,
+  value:this.dashboardService.StatsPieChart[i].employees}
 }
 }
 refreshBarChartData(){
@@ -45,10 +48,16 @@ refreshScatterChartData(){
 refreshBubbleChartData(){
   for(let i=0;i<this.dashboardService.bubbleDataset.children.length;i++){
     this.children[i]={
-      Name:this.dashboardService.bubbleDataset.children[i].branch,
-      Count:this.dashboardService.bubbleDataset.children[i].employees,
+      Name:this.dashboardService.bubbleDataset.children[i].name,
+      Count:this.dashboardService.bubbleDataset.children[i].consumers,
      }
     }
     this.bubbleChartDatas={children:this.children};
+}
+refreshGaugeChartData(){
+  this.gaugeChartData=this.dashboardService.gaugeChartData;
+}
+refreshDensityChartData(){
+  this.densityChartData=this.dashboardService.densityChartData;
 }
 }

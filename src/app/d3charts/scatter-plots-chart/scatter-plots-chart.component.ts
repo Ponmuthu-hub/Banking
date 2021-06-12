@@ -47,7 +47,7 @@ drawPlot(): void {
   .style("text-anchor", "middle")
   .text(this.title)
   .attr("fill", "#00008B");
-// text label for the x axis
+// text label for the y axis
   this.svg.append("text")
   .attr("transform", "rotate(-90)")
   .attr("y", 0 - this.margin)

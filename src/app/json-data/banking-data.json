@@ -1,0 +1,49 @@
+{
+    "StatsPieChart":[
+        {"branch": "Madurai", "employees": 15},
+        {"branch": "Selam", "employees": 22},
+        {"branch": "Trichy", "employees": 8},
+        {"branch": "Namakkal", "employees": 18},
+        {"branch": "Sivaganga", "employees":15 },
+        {"branch": "Chennai", "employees": 17},
+        {"branch": "Ramnad", "employees":5}           
+    ],
+    "StatsBarChart": [
+        { "branch": "Madurai", "accounts": 56732 },
+        {  "branch": "Chennai", "accounts": 68798 },
+        {  "branch": "Trichy", "accounts": 45367 },
+        {  "branch": "Selam", "accounts": 24467 },
+        {  "branch": "Namakkal", "accounts": 19400 },
+        {  "branch": "Sivaganga", "accounts": 10900 },
+        {  "branch": "Ramnad", "accounts": 11388 },
+        {  "branch": "kadalur", "accounts": 8636 },
+        {  "branch": "Coimbatore","accounts": 46667 }
+      
+      ],
+      "StatsScatterChart":[
+        {"branch": "Madurai", "Stars": 166443,"Year": 2019},
+        {"branch": "Chennai", "Stars": 150793, "Year": 2021},
+        {"branch": "Trichy", "Stars": 62342, "Year": 2016},
+        {"branch": "Sivaganga", "Stars": 27647, "Year": 2010},
+        {"branch": "Coimbatore", "Stars": 41471, "Year": 2011},
+        {"branch": "Ramnad", "Stars": 37647, "Year": 2014},
+        {"branch": "Selam", "Stars": 21471, "Year": 2013}
+      ],
+      "bubbleDataset" :{
+        "children": [
+          {"name": "Educational","consumers":307},
+          {"name": "Housing", "consumers": 243},
+          {"name": "Car", "consumers": 120},
+          {"name": "Gold", "consumers":401},
+          {"name": "Business", "consumers": 250},
+          {"name": "Personal", "consumers": 110},
+          {"name": "Bike", "consumers": 100},
+          {"name":"Property","consumers": 167}
+        ]
+       },
+       "gaugeChartData":{
+           "ratings":8.5,"maxRatings":10},
+       "densityChartData":[
+           [2017,44],[2016,36],[2018,62],[2019,72],[2020,45],[2014,40],[2015,50]
+        ]
+}

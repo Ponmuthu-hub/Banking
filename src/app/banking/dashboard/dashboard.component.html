@@ -10,7 +10,8 @@
            
         </div>
         <div class="col-md-6">
-             <figure><app-pie-chart [chartData]="pieChartDatas"></app-pie-chart></figure>
+            <figure><app-gauge-chart [chartData]="gaugeChartData"></app-gauge-chart> </figure>     
+            
         </div>      
     </div>
     <div class="row col-md-12">
@@ -22,7 +23,17 @@
             <figure><app-scatter-plots-chart [chartData]="scatterChartDatas"></app-scatter-plots-chart></figure>
         </div>      
     </div>
+    <div class="row col-md-12">
+        <div class="col-md-6">   
+            <figure><app-density-chart [chartData]="densityChartData"></app-density-chart> </figure>                   
+        </div>
+        <div class="col-md-6">
+            <figure><app-pie-chart [chartData]="pieChartDatas"></app-pie-chart></figure>
+        </div>      
+    </div>
+    
 </div>
+
 
 
 
